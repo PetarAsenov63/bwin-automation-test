@@ -1,0 +1,18 @@
+<suite name="Bwin Live Betting Suite" parallel="tests" thread-count="2" verbose="1">
+    <parameter name="baseUrl" value="https://sports.bwin.com/en/sports/live/betting"/>
+    <parameter name="device" value="${device}"/>
+    <test name="Desktop-Tests">
+        <parameter name="device" value="desktop"/>
+        <classes>
+            <class name="test.bwin.AddPickToBetslipTest"/>
+            <class name="test.bwin.LiveOddsUpdatesTest"/>
+            <class name="test.bwin.CheckSportSortingTest"/>
+        </classes>
+    </test>
+    <test name="Mobile-Tests">
+        <parameter name="device" value="mobile"/>
+        <classes>
+            <class name="test.bwin.ResponsiveDesignTest"/>
+        </classes>
+    </test>
+</suite>
